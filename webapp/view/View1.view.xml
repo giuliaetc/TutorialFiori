@@ -2,37 +2,41 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     
-   <Page id="page" title="{i18n>title}">
+   <Page id="page" title="{i18n>title}" titleAlignment="Center">
+
 
       <Table
       id="table"
       items="{path: 'setDateForControl>/items' , templateShareable:true}">
       <infoToolbar>
 			<OverflowToolbar>
-				<Label text="Info"/>
+				<Label text="Products Info"/>
+            <ToolbarSpacer />
+				      <Button text="{i18n>moreInfo}" type="Emphasized" id="detailBtn" press=".onNavToDetail" class="sapUiSmallMarginEnd" />
+	         
 			</OverflowToolbar>
 		</infoToolbar>
       <columns>
          <Column>
-           <Text text="Column1" />
+           <Text text="Product" />
          </Column>
          <Column>
-           <Text text="Column2" />
+           <Text text="Id" />
          </Column>
          <Column>
-            <Text text="Column3" />
+            <Text text="Supplier" />
          </Column>
          <Column>
-            <Text text="Column4" />
+            <Text text="Price" />
          </Column>
       </columns>
       <items>
-         <ColumnListItem>
+         <ColumnListItem vAlign="Middle" type="Navigation" press="itemPressed">
             <cells>
-               <ObjectIdentifier title="{setDateForControl>FolderNumber}" 	text="{setDateForContro>Status}" />
-               <ObjectIdentifier title="{setDateForControl>FolderNumber}" 	text="{setDateForContro>Status}"/>
-               <ObjectIdentifier title="{setDateForControl>FolderNumber}" 	text="{setDateForContro>Status}"/>
-               <ObjectIdentifier title="{setDateForControl>FolderNumber}" 	text="{setDateForContro>Status}"/>
+               <ObjectIdentifier title="{setDateForControl>ProductName}" />
+               <Label text="{setDateForControl>IdNumber}" 	/>
+               <Label text="{setDateForControl>Supplier}" 	/>
+               <Label text="{setDateForControl>Price} {setDateForControl>CurrencyCode}"/>
             </cells>
          </ColumnListItem>
       </items>
@@ -40,3 +44,4 @@
    </Page>
 
 </mvc:View>
+

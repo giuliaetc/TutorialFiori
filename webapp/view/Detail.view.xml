@@ -1,0 +1,125 @@
+<mvc:View
+   controllerName="sap.btp.project1.controller.Detail"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc"
+   xmlns:core="sap.ui.core"
+   xmlns:l="sap.ui.layout"
+   xmlns:f="sap.ui.layout.form">
+
+   <Page 
+    title="New Product Page"
+    showNavButton="true" 
+    navButtonPress="onNavBack" >
+   
+	<VBox class="sapUiSmallMargin">
+		<f:Form id="FormToolbar"
+			editable="true"
+			ariaLabelledBy="Title1">
+			<f:toolbar>
+				<Toolbar id="TB1">
+					<Title id="Title1" text="Insert a new product"/>
+				</Toolbar>
+			</f:toolbar>
+			<f:layout>
+				<f:ResponsiveGridLayout
+					labelSpanXL="4"
+					labelSpanL="3"
+					labelSpanM="4"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="0"
+					emptySpanL="4"
+					emptySpanM="0"
+					emptySpanS="0"
+					columnsXL="2"
+					columnsL="1"
+					columnsM="1"
+					singleContainerFullSize="false" />
+			</f:layout>
+			<f:formContainers>
+				<f:FormContainer ariaLabelledBy="Title2">
+					<f:toolbar>
+						<Toolbar>
+							<Title id="Title2" text="Form Save Button"/>
+							<ToolbarSpacer />
+					        <Button icon="sap-icon://save" press=".onSave" enabled="false" id="saveButton" ariaHasPopup="Dialog" />
+							<Button icon="sap-icon://action" press=".onAction" enabled="false" id="actionButton" ariaHasPopup="Dialog" />
+						</Toolbar>
+					</f:toolbar>
+					<f:formElements>
+						<f:FormElement label="Product Name">
+							<f:fields>
+								<Input value="" id="InputName" placeholder="Enter product name" change="onNameInputChange"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Product Id">
+							<f:fields>
+								<Input value="" id="InputId" placeholder="Enter ID number" change="onIdInputChange"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Supplier's contact">
+							<f:fields>
+								<Input   id="InputEmail"
+  										 placeholder="Enter supplier's email"
+                                         change="onEmailInputChange"
+                                         valueStateText="Formato email non valido"
+                                          />
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+				<f:FormContainer id="oModelForm" ariaLabelledBy="Title3" visible="false"  >
+					<f:toolbar>
+						<Toolbar>
+							<Title id="Title3" text="New product sucessfully added"/>
+						</Toolbar>
+					</f:toolbar>
+					<f:formElements>
+						<f:FormElement label="Product Name">
+							<f:fields>
+								<Text text="{formData>/campo1}" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Product Id">
+							<f:fields>
+								<Text text="{formData>/campo2}" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Supplier's contact">
+							<f:fields>
+									<Text text="{formData>/campo3}" />
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+				<f:FormContainer id="FormCRUD" ariaLabelledBy="Title4" visible="false"  >
+					<f:toolbar>
+						<Toolbar>
+							<Title id="Title4" text="New product sucessfully added (with .push())"/>
+						</Toolbar>
+					</f:toolbar>
+					<f:formElements>
+						<f:FormElement label="Product Name">
+							<f:fields>   <!-- Il path "dataModel>/0/dato1" indica che stiamo leggendo il campo "dato1" del primo elemento nell'array del modello "dataModel". -->
+								<Text text="{path: 'dataModel>/0/dato1'}" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Product Id">
+							<f:fields>
+								<Text text="{dataModel>/0/dato2}" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Supplier's contact">
+							<f:fields>
+									<Text text="{dataModel>/0/dato3}" />
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+			</f:formContainers>
+		</f:Form>
+	</VBox>
+
+   </Page>
+
+</mvc:View>

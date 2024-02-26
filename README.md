@@ -33,4 +33,15 @@ An SAP Fiori application.
 
 1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
 
+#####AGGIORNAMENTO:
+(15/02)
+Implementata una table con un tasto che mi porta ad una form dove inserisco un nuovo prodotto e il tasto salva che mi apre una Dialog di riepilogo   
+
+(20/02)
+Implementata una nuova form con controllo di validità sull'input email che mi salva tutti i dati da input in un ModelJSON che posso utilizzare per una qualsiasi view
+
+(26/02)
+Implementati due modi diversi per salvare dati da input presi da una form e salvati su un JSONModel, il primo modo attivato dal saveButton 
+utilizza i metodi setProperty() e getProperty() sul model per salvargli i singoli valori;
+il secondo modo utilizza il metodo getData().push(oggettoDiDatiCheGliPasso).
 

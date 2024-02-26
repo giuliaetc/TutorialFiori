@@ -77,12 +77,20 @@
       },
       "routes": [
         {
-          "name": "RouteView1",
-          "pattern": ":?query:",
+          "name": "homeView",
+          "pattern": "",
           "target": [
             "TargetView1"
           ]
+        },
+        {
+          "name": "detail",
+          "pattern": "detail",
+          "target": [
+            "TargetDetail"
+          ]
         }
+
       ],
       "targets": {
         "TargetView1": {
@@ -90,10 +98,17 @@
           "transition": "slide",
           "clearControlAggregation": false,
           "viewId": "View1",
-          "viewName": "View1"
+          "viewName": "View1",
+          "viewLevel": 1
+        },
+
+        "TargetDetail": {
+          "viewName": "Detail",
+          "viewLevel": 2
         }
       }
     },
+
     "rootView": {
       "viewName": "sap.btp.project1.view.App",
       "type": "XML",

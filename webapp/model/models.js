@@ -24,33 +24,33 @@ sap.ui.define([
 
                 var oModel = new JSONModel({
                 items: [{
-                    FolderNumber: "FN1",
-                    WordO: "4443434-4343,43434",
-                    Plant: "ITTN",
-                    Date: "26/07/2022",
-                    Status: "Draft"
+                    ProductName: "Macbook Air M2",
+                    IdNumber: "9876543-2345",
+                    Supplier:  "Apple",
+                    Price: 1239,
+                    CurrencyCode: "EUR"
                 },
                  {
-                    FolderNumber: "FN2",
-                    WordO: "4443434-4343,43434",
-                    Plant: "ITTN",
-                    Date: "26/07/2022",
-                    Status: "Draft"
+                    ProductName: "iPhone 15 Plus",
+                    IdNumber: "1234567-6543",
+                    Supplier:  "Apple",
+                    Price: 956.49,
+                    CurrencyCode: "EUR"
                 },
 
                 {
-                    FolderNumber: "FN3",
-                    WordO: "4443434-4343,43434",
-                    Plant: "ITTN",
-                    Date: "26/07/2022",
-                    Status: "Draft"
+                    ProductName: "e-Book Reader",
+                    IdNumber: "7773434-3485",
+                    Supplier: "Amazon",
+                    Price: 56.49,
+                    CurrencyCode: "EUR"
                 },
                 {
-                    FolderNumber: "FN4",
-                    WordO: "4443434-4343,43434",
-                    Plant: "ITTN",
-                    Date: "26/07/2022",
-                    Status: "Draft"
+                    ProductName:"Designer Mousepad",
+                    IdNumber: "4443434-4343",
+                    Supplier:  "Logitech",
+                    Price: 22.29,
+	                CurrencyCode: "EUR"
 
                 }]
 
