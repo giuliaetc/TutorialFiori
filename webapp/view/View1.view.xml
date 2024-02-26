@@ -1,7 +1,42 @@
 <mvc:View controllerName="sap.btp.project1.controller.View1"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content />
-    </Page>
+    
+   <Page id="page" title="{i18n>title}">
+
+      <Table
+      id="table"
+      items="{path: 'setDateForControl>/items' , templateShareable:true}">
+      <infoToolbar>
+			<OverflowToolbar>
+				<Label text="Info"/>
+			</OverflowToolbar>
+		</infoToolbar>
+      <columns>
+         <Column>
+           <Text text="Column1" />
+         </Column>
+         <Column>
+           <Text text="Column2" />
+         </Column>
+         <Column>
+            <Text text="Column3" />
+         </Column>
+         <Column>
+            <Text text="Column4" />
+         </Column>
+      </columns>
+      <items>
+         <ColumnListItem>
+            <cells>
+               <ObjectIdentifier title="{setDateForControl>FolderNumber}" 	text="{setDateForContro>Status}" />
+               <ObjectIdentifier title="{setDateForControl>FolderNumber}" 	text="{setDateForContro>Status}"/>
+               <ObjectIdentifier title="{setDateForControl>FolderNumber}" 	text="{setDateForContro>Status}"/>
+               <ObjectIdentifier title="{setDateForControl>FolderNumber}" 	text="{setDateForContro>Status}"/>
+            </cells>
+         </ColumnListItem>
+      </items>
+    </Table>
+   </Page>
+
 </mvc:View>

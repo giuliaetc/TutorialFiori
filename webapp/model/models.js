@@ -18,6 +18,49 @@ sap.ui.define([
                 var oModel = new JSONModel(Device);
                 oModel.setDefaultBindingMode("OneWay");
                 return oModel;
+        },
+
+            setDateForControl: function () {
+
+                var oModel = new JSONModel({
+                items: [{
+                    FolderNumber: "FN1",
+                    WordO: "4443434-4343,43434",
+                    Plant: "ITTN",
+                    Date: "26/07/2022",
+                    Status: "Draft"
+                },
+                 {
+                    FolderNumber: "FN2",
+                    WordO: "4443434-4343,43434",
+                    Plant: "ITTN",
+                    Date: "26/07/2022",
+                    Status: "Draft"
+                },
+
+                {
+                    FolderNumber: "FN3",
+                    WordO: "4443434-4343,43434",
+                    Plant: "ITTN",
+                    Date: "26/07/2022",
+                    Status: "Draft"
+                },
+                {
+                    FolderNumber: "FN4",
+                    WordO: "4443434-4343,43434",
+                    Plant: "ITTN",
+                    Date: "26/07/2022",
+                    Status: "Draft"
+
+                }]
+
+            });
+
+            oModel.setDefaultBindingMode("TwoWay");
+            return oModel;
+
         }
+
+
     };
 });
